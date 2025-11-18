@@ -11,6 +11,8 @@ from sklearn.preprocessing import LabelEncoder
 # 1. Load dataset
 data = pd.read_csv("adult.csv")
 
+data = data.sample(n=5000, random_state=42)
+
 # 2. Prepare data
 # Encode categorical variables
 le = LabelEncoder()
